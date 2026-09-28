@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+
+/* Required for correct iframe sizing — AEM section margins inflate shadow body */
+main > div,
+main > .section,
+main > .section:first-of-type {
+  margin: 0;
+}
+main > .section > div {
+  max-width: none;
+  padding: 0;
+}
+body {
+  overflow: auto;
+}
+
+main .register-insurance-claim {
+  font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  color: #454545;
+}
+
+main .register-insurance-claim h3,
+main .register-insurance-claim [class*="title"] {
+  font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+main .register-insurance-claim .ric-card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header — palette-derived dark brand background via getThemedCardBg(PALETTE) in JS */
+main .register-insurance-claim .ric-header {
+  padding: 16px 20px;
+}
+
+main .register-insurance-claim .ric-title {
+  margin: 0 !important;
+  font-size: 18px !important;
+  font-weight: 700;
+  line-height: 1.2 !important;
+}
+
+main .register-insurance-claim .ric-sub {
+  margin: 2px 0 0 !important;
+  font-size: 12px !important;
+  opacity: 0.85;
+  line-height: 1.4 !important;
+}
+
+main .register-insurance-claim .ric-ref {
+  margin: 6px 0 0 !important;
+  font-size: 13px !important;
+  opacity: 0.9;
+}
+
+main .register-insurance-claim .ric-status {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #ba5a0a;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* Progress indicator */
+main .register-insurance-claim .ric-progress {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4px;
+  padding: 14px 20px 4px;
+  position: relative;
+}
+
+main .register-insurance-claim .ric-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+main .register-insurance-claim .ric-dot {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  background: #e6e6e6;
+  color: #525252;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+main .register-insurance-claim .ric-step.active .ric-dot {
+  background: #005dac;
+  color: #ffffff;
+}
+
+main .register-insurance-claim .ric-step.done .ric-dot {
+  background: #ba5a0a;
+  color: #ffffff;
+}
+
+main .register-insurance-claim .ric-step-label {
+  font-size: 11px;
+  color: #565656;
+  font-weight: 500;
+}
+
+main .register-insurance-claim .ric-step.active .ric-step-label {
+  color: #005dac;
+  font-weight: 600;
+}
+
+/* Body */
+main .register-insurance-claim .ric-body {
+  padding: 12px 20px 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+main .register-insurance-claim .ric-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+main .register-insurance-claim .ric-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #6a6a6a;
+}
+
+main .register-insurance-claim .ric-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 9px 12px;
+  border: 1px solid #d5d5d5;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #454545;
+  background: #ffffff;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+main .register-insurance-claim .ric-input:focus {
+  outline: none;
+  border-color: #005dac;
+  box-shadow: 0 0 0 2px rgba(0, 93, 172, 0.2);
+}
+
+main .register-insurance-claim .ric-textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+/* Checklist */
+main .register-insurance-claim .ric-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+main .register-insurance-claim .ric-check {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13px;
+  color: #454545;
+  cursor: pointer;
+}
+
+main .register-insurance-claim .ric-check input {
+  width: 16px;
+  height: 16px;
+  accent-color: #005dac;
+  flex: 0 0 auto;
+}
+
+main .register-insurance-claim .ric-doc-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13px;
+}
+
+main .register-insurance-claim .ric-mark {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  flex: 0 0 auto;
+  color: #ffffff;
+}
+
+main .register-insurance-claim .ric-mark-ok {
+  background: #2dca72;
+}
+
+main .register-insurance-claim .ric-mark-missing {
+  background: #f58220;
+}
+
+main .register-insurance-claim .ric-doc-name {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+main .register-insurance-claim .ric-doc-tag {
+  font-size: 11px;
+  font-weight: 600;
+  color: #ba5a0a;
+  flex: 0 0 auto;
+}
+
+main .register-insurance-claim .ric-section-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #6a6a6a;
+  margin-top: 2px;
+}
+
+main .register-insurance-claim .ric-message {
+  margin: 0 !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  color: #454545;
+}
+
+main .register-insurance-claim .ric-assist {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 12px;
+  background: rgba(0, 93, 172, 0.07);
+  border-radius: 8px;
+}
+
+main .register-insurance-claim .ric-assist-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #005dac;
+}
+
+main .register-insurance-claim .ric-assist-val {
+  font-size: 14px;
+  color: #454545;
+}
+
+/* Footer buttons */
+main .register-insurance-claim .ric-footer {
+  display: flex;
+  gap: 10px;
+  padding: 14px 20px 4px;
+}
+
+main .register-insurance-claim .ric-btn {
+  flex: 1 1 0;
+  padding: 11px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+main .register-insurance-claim .ric-btn-primary {
+  background: #ba5a0a;
+  color: #ffffff;
+}
+
+main .register-insurance-claim .ric-btn-primary:hover,
+main .register-insurance-claim .ric-btn-primary:focus-visible {
+  background: #9c4c08;
+  outline: none;
+}
+
+main .register-insurance-claim .ric-btn-ghost {
+  background: transparent;
+  color: #005dac;
+  border: 1px solid #005dac;
+}
+
+main .register-insurance-claim .ric-btn-ghost:hover,
+main .register-insurance-claim .ric-btn-ghost:focus-visible {
+  background: rgba(0, 93, 172, 0.08);
+  outline: none;
+}
+
+main .register-insurance-claim .ric-disclaimer {
+  margin: 0 !important;
+  padding: 12px 20px 16px;
+  font-size: 11px !important;
+  line-height: 1.4 !important;
+  color: #6a6a6a;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  main .register-insurance-claim { background: transparent; color: #e6e6e6; }
+  main .register-insurance-claim .ric-card { background: #1e1e1e; }
+  main .register-insurance-claim .ric-input {
+    background: #2a2a2a;
+    border-color: #444;
+    color: #e6e6e6;
+  }
+  main .register-insurance-claim .ric-check,
+  main .register-insurance-claim .ric-doc-row,
+  main .register-insurance-claim .ric-message,
+  main .register-insurance-claim .ric-assist-val { color: #e6e6e6; }
+  main .register-insurance-claim .ric-dot { background: #3a3a3a; color: #aaa; }
+  main .register-insurance-claim .ric-assist { background: rgba(90, 160, 230, 0.15); }
+  main .register-insurance-claim .ric-assist-label { color: #6ea8e6; }
+  main .register-insurance-claim .ric-btn-ghost { color: #6ea8e6; border-color: #6ea8e6; }
+  main .register-insurance-claim .ric-step.active .ric-step-label { color: #6ea8e6; }
+  main .register-insurance-claim .ric-label,
+  main .register-insurance-claim .ric-section-label { color: #b0b0b0; }
+  main .register-insurance-claim .ric-step-label { color: #b0b0b0; }
+  main .register-insurance-claim .ric-disclaimer { color: #a0a0a0; }
+}
+
+body.dark main .register-insurance-claim { background: transparent; color: #e6e6e6; }
+body.dark main .register-insurance-claim .ric-card { background: #1e1e1e; }
+body.dark main .register-insurance-claim .ric-input {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #e6e6e6;
+}
+body.dark main .register-insurance-claim .ric-check,
+body.dark main .register-insurance-claim .ric-doc-row,
+body.dark main .register-insurance-claim .ric-message,
+body.dark main .register-insurance-claim .ric-assist-val { color: #e6e6e6; }
+body.dark main .register-insurance-claim .ric-dot { background: #3a3a3a; color: #aaa; }
+body.dark main .register-insurance-claim .ric-assist { background: rgba(90, 160, 230, 0.15); }
+body.dark main .register-insurance-claim .ric-assist-label { color: #6ea8e6; }
+body.dark main .register-insurance-claim .ric-btn-ghost { color: #6ea8e6; border-color: #6ea8e6; }
+body.dark main .register-insurance-claim .ric-step.active .ric-step-label { color: #6ea8e6; }
+body.dark main .register-insurance-claim .ric-label,
+body.dark main .register-insurance-claim .ric-section-label { color: #b0b0b0; }
+body.dark main .register-insurance-claim .ric-step-label { color: #b0b0b0; }
+body.dark main .register-insurance-claim .ric-disclaimer { color: #a0a0a0; }
