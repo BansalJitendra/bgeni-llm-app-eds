@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+
+/* Required for correct iframe sizing — AEM section margins inflate shadow body */
+main > div,
+main > .section,
+main > .section:first-of-type {
+  margin: 0;
+}
+main > .section > div {
+  max-width: none;
+  padding: 0;
+}
+body {
+  overflow: auto;
+}
+
+main .renew-insurance-policy {
+  font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #454545;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+main .renew-insurance-policy h3,
+main .renew-insurance-policy [class*="title"] {
+  font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+main .renew-insurance-policy .rip-card {
+  width: 100%;
+  max-width: 440px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+
+/* Brand-blue header block */
+main .renew-insurance-policy .rip-header {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+main .renew-insurance-policy .rip-type {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.8;
+}
+
+main .renew-insurance-policy .rip-title {
+  margin: 0 !important;
+  font-size: 18px !important;
+  line-height: 1.2 !important;
+  font-weight: 700;
+}
+
+main .renew-insurance-policy .rip-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+main .renew-insurance-policy .rip-chip {
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.16);
+  color: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+main .renew-insurance-policy .rip-coverage {
+  margin: 0 !important;
+  font-size: 13px !important;
+  line-height: 1.45 !important;
+  opacity: 0.88;
+}
+
+main .renew-insurance-policy .rip-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Needs-attention / requirements list */
+main .renew-insurance-policy .rip-attention {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+main .renew-insurance-policy .rip-attention-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #131619;
+  opacity: 0.6;
+}
+
+main .renew-insurance-policy .rip-attention-row {
+  font-size: 13px;
+  line-height: 1.4;
+  padding: 8px 10px;
+  background: rgba(245, 130, 32, 0.08);
+  border-left: 3px solid #f58220;
+  border-radius: 6px;
+}
+
+/* Form */
+main .renew-insurance-policy .rip-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+main .renew-insurance-policy .rip-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+main .renew-insurance-policy .rip-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  opacity: 0.5;
+}
+
+main .renew-insurance-policy .rip-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  border: 1px solid #d5d5d5;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: inherit;
+  color: #454545;
+  background: #fff;
+  transition: border-color 0.3s ease-in, box-shadow 0.3s ease-in;
+}
+
+main .renew-insurance-policy .rip-input:focus {
+  outline: none;
+  border-color: #005dac;
+  box-shadow: 0 0 0 3px rgba(0, 93, 172, 0.18);
+}
+
+/* Amount row (confirmation) */
+main .renew-insurance-policy .rip-amount {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  background: rgba(0, 93, 172, 0.06);
+  border-radius: 10px;
+}
+
+main .renew-insurance-policy .rip-amount-label {
+  font-size: 13px;
+  color: #454545;
+}
+
+main .renew-insurance-policy .rip-amount-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #005dac;
+}
+
+/* Primary orange CTA */
+main .renew-insurance-policy .rip-cta {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background: #b85a00;
+  color: #fff;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 14px 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in;
+}
+
+main .renew-insurance-policy .rip-cta:hover,
+main .renew-insurance-policy .rip-cta:focus-visible {
+  background: #9c4d00;
+  outline: none;
+}
+
+main .renew-insurance-policy .rip-cta:focus-visible {
+  box-shadow: 0 0 0 3px rgba(245, 130, 32, 0.4);
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  main .renew-insurance-policy { background: transparent; color: #e6e6e6; }
+  main .renew-insurance-policy .rip-card { background: #17181a; box-shadow: 0 0 40px rgba(0, 0, 0, 0.5); }
+  main .renew-insurance-policy .rip-attention-row { background: rgba(245, 130, 32, 0.14); }
+  main .renew-insurance-policy .rip-input { background: #1e1e1e; border-color: #3a3a3a; color: #e6e6e6; }
+  main .renew-insurance-policy .rip-amount { background: rgba(0, 93, 172, 0.22); }
+  main .renew-insurance-policy .rip-amount-label { color: #cfcfcf; }
+  main .renew-insurance-policy .rip-amount-value { color: #6db3f0; }
+  main .renew-insurance-policy .rip-attention-label { color: #e6e6e6; }
+}
+
+body.dark main .renew-insurance-policy { background: transparent; color: #e6e6e6; }
+body.dark main .renew-insurance-policy .rip-card { background: #17181a; box-shadow: 0 0 40px rgba(0, 0, 0, 0.5); }
+body.dark main .renew-insurance-policy .rip-attention-row { background: rgba(245, 130, 32, 0.14); }
+body.dark main .renew-insurance-policy .rip-input { background: #1e1e1e; border-color: #3a3a3a; color: #e6e6e6; }
+body.dark main .renew-insurance-policy .rip-amount { background: rgba(0, 93, 172, 0.22); }
+body.dark main .renew-insurance-policy .rip-amount-label { color: #cfcfcf; }
+body.dark main .renew-insurance-policy .rip-amount-value { color: #6db3f0; }
+body.dark main .renew-insurance-policy .rip-attention-label { color: #e6e6e6; }
