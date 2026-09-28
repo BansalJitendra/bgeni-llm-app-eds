@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+
+/* Required for correct iframe sizing — AEM section margins inflate shadow body */
+main > div,
+main > .section,
+main > .section:first-of-type {
+  margin: 0;
+}
+main > .section > div {
+  max-width: none;
+  padding: 0;
+}
+body {
+  overflow: auto;
+}
+
+main .get-quote {
+  font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  color: #454545;
+}
+
+main .get-quote h3,
+main .get-quote [class*='title'] {
+  font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+main .get-quote .gq-card {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+/* Header block — palette-derived dark brand background */
+main .get-quote .gq-header {
+  position: relative;
+}
+
+main .get-quote .gq-hero {
+  width: 100%;
+  height: 120px;
+  max-height: 140px;
+  object-fit: cover;
+  display: block;
+}
+
+main .get-quote .gq-header-meta {
+  padding: 12px 16px;
+}
+
+main .get-quote .gq-title {
+  margin: 0 !important;
+  font-size: 16px !important;
+  line-height: 1.2 !important;
+  font-weight: 700;
+  color: inherit;
+}
+
+main .get-quote .gq-chip {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.16);
+  color: inherit;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+main .get-quote .gq-desc {
+  margin: 8px 0 0 !important;
+  font-size: 11px !important;
+  line-height: 1.4 !important;
+  opacity: 0.75;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: inherit;
+}
+
+/* Form area — light background */
+main .get-quote .gq-form {
+  padding: 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+main .get-quote .gq-section {
+  margin: 6px 0 0 !important;
+  font-size: 10px !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.5;
+}
+
+main .get-quote .gq-field {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+main .get-quote .gq-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  opacity: 0.5;
+}
+
+main .get-quote .gq-input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #d5d5d5;
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: inherit;
+  color: #454545;
+  background: #ffffff;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+main .get-quote .gq-input:focus {
+  outline: none;
+  border-color: #005dac;
+  box-shadow: 0 0 0 2px rgba(0, 93, 172, 0.25);
+}
+
+main .get-quote .gq-note {
+  margin: 4px 0 0 !important;
+  font-size: 10px !important;
+  line-height: 1.4 !important;
+  opacity: 0.6;
+}
+
+main .get-quote .gq-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+main .get-quote .gq-btn {
+  width: 100%;
+  padding: 11px 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in, opacity 0.3s ease-in;
+}
+
+main .get-quote .gq-btn-primary {
+  background: #b35900;
+  color: #ffffff;
+}
+
+main .get-quote .gq-btn-primary:hover,
+main .get-quote .gq-btn-primary:focus-visible {
+  background: #9c4a00;
+  outline: none;
+}
+
+main .get-quote .gq-btn-secondary {
+  background: transparent;
+  color: #005dac;
+  border: 1px solid #005dac;
+}
+
+main .get-quote .gq-btn-secondary:hover,
+main .get-quote .gq-btn-secondary:focus-visible {
+  background: rgba(0, 93, 172, 0.08);
+  outline: none;
+}
+
+/* Confirmation view */
+main .get-quote .gq-header-confirm {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+}
+
+main .get-quote .gq-check {
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #b35900;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+main .get-quote .gq-confirm-body {
+  padding: 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+main .get-quote .gq-ref {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  background: rgba(0, 93, 172, 0.06);
+  border-radius: 6px;
+}
+
+main .get-quote .gq-ref-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  opacity: 0.6;
+}
+
+main .get-quote .gq-ref-value {
+  font-size: 13px;
+  font-weight: 700;
+  color: #131619;
+}
+
+main .get-quote .gq-message {
+  margin: 0 !important;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  opacity: 0.85;
+}
+
+/* Dark mode — outer stays transparent; header keeps brand palette color */
+@media (prefers-color-scheme: dark) {
+  main .get-quote { background: transparent; color: #e6e6e6; }
+  main .get-quote .gq-card { background: #1e1e1e; }
+  main .get-quote .gq-input { background: #2a2a2a; color: #e6e6e6; border-color: #444; }
+  main .get-quote .gq-ref { background: rgba(255, 255, 255, 0.06); }
+  main .get-quote .gq-ref-value { color: #ffffff; }
+  main .get-quote .gq-btn-secondary { color: #4da3e8; border-color: #4da3e8; }
+}
+
+body.dark main .get-quote { background: transparent; color: #e6e6e6; }
+body.dark main .get-quote .gq-card { background: #1e1e1e; }
+body.dark main .get-quote .gq-input { background: #2a2a2a; color: #e6e6e6; border-color: #444; }
+body.dark main .get-quote .gq-ref { background: rgba(255, 255, 255, 0.06); }
+body.dark main .get-quote .gq-ref-value { color: #ffffff; }
+body.dark main .get-quote .gq-btn-secondary { color: #4da3e8; border-color: #4da3e8; }
